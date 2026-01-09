@@ -5,39 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sarkari Result 2.0 - Official Website</title>
     <style>
+        /* General Styles */
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; line-height: 1.6; color: #333; }
         header { background-color: #ff0000; color: white; text-align: center; padding: 15px 0; border-bottom: 5px solid #cc0000; }
         header h1 { margin: 0; font-size: 2.2rem; text-shadow: 2px 2px #000; }
+        
+        /* Navigation & Search */
         nav { background: #000; padding: 10px; text-align: center; position: sticky; top: 0; z-index: 1000; }
         nav a { color: white; text-decoration: none; margin: 0 10px; font-weight: bold; font-size: 14px; }
         nav a:hover { color: #ffcc00; }
         .search-container { display: inline-block; margin-left: 15px; }
-        .search-container input { padding: 5px; border-radius: 4px; border: none; }
+        .search-container input { padding: 6px; border-radius: 4px; border: none; width: 200px; }
 
+        /* Welcome Section */
         .info-section { padding: 15px; max-width: 1100px; margin: auto; background: white; margin-top: 10px; border: 1px solid #ddd; text-align: center; }
         
-        /* Colored Buttons Section */
+        /* Top Links Grid (Buttons) */
         .quick-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; padding: 10px; max-width: 1100px; margin: auto; }
         .btn { padding: 12px; color: white; text-decoration: none; font-weight: bold; flex: 1; min-width: 200px; text-align: center; border-radius: 4px; font-size: 14px; }
         .btn-red { background: #ff0000; } .btn-green { background: #008000; } .btn-yellow { background: #cc9900; } 
         .btn-orange { background: #ff8c00; } .btn-pink { background: #ff69b4; } .btn-blue { background: #00bfff; }
 
-        /* Main Grid for Results/Admit/Jobs */
+        /* Results / Admit Card / Latest Job Box Layout */
         .main-container { display: flex; flex-wrap: wrap; gap: 10px; padding: 20px; justify-content: center; max-width: 1200px; margin: auto; }
         .table-box { border: 2px solid #ff0000; width: 31%; min-width: 300px; background: #fff; }
         .table-box h3 { background: #ff0000; color: white; margin: 0; padding: 10px; text-align: center; border-bottom: 2px solid #cc0000; }
-        .table-box ul { list-style: none; padding: 10px; margin: 0; height: 250px; overflow-y: auto; }
+        .table-box ul { list-style: none; padding: 10px; margin: 0; min-height: 250px; }
         .table-box ul li { border-bottom: 1px dotted #ccc; padding: 8px 0; font-size: 14px; }
         .table-box ul li a { text-decoration: none; color: #0000ee; font-weight: bold; }
         .table-box ul li a:hover { color: red; text-decoration: underline; }
 
+        /* Blinking New Tag */
         .new-tag { color: red; font-size: 10px; font-weight: bold; vertical-align: super; margin-left: 5px; animation: blink 1s infinite; }
         @keyframes blink { 0% {opacity: 1;} 50% {opacity: 0;} 100% {opacity: 1;} }
 
+        /* Typography & Tables */
         .red-bar { background: #ff0000; color: white; padding: 8px; text-align: center; margin: 20px 0 10px 0; font-weight: bold; }
         .grid-table { width: 100%; border-collapse: collapse; margin: 10px 0; }
         .grid-table td { border: 1px solid #ddd; padding: 10px; text-align: center; background: #fff; font-weight: bold; color: #d9534f; }
         
+        /* Footer */
         footer { background: #ff8c00; text-align: center; padding: 25px; margin-top: 30px; border-top: 5px solid #e67e22; font-weight: bold; }
         footer a { color: black; text-decoration: none; margin: 0 10px; }
     </style>
@@ -50,8 +57,14 @@
 </header>
 
 <nav>
-    <a href="#">Home</a> <a href="#">Latest Job</a> <a href="#">Admit Card</a> <a href="#">Answer Key</a> <a href="#">Result</a>
-    <div class="search-container"><input type="text" id="myInput" onkeyup="searchJob()" placeholder="Jobs Search Karein..."></div>
+    <a href="#">Home</a> 
+    <a href="#">Latest Job</a> 
+    <a href="#">Admit Card</a> 
+    <a href="#">Answer Key</a> 
+    <a href="#">Result</a>
+    <div class="search-container">
+        <input type="text" id="myInput" onkeyup="searchJob()" placeholder="Job/Result Search...">
+    </div>
 </nav>
 
 <div class="info-section">
@@ -60,43 +73,45 @@
 </div>
 
 <div class="quick-links">
-    <a href="#" class="btn btn-red">UP Police Constable Form</a>
-    <a href="#" class="btn btn-green">RRB ALP Online Form</a>
-    <a href="#" class="btn btn-yellow">SSC GD Online Form</a>
-    <a href="#" class="btn btn-orange">Delhi Police Online Form</a>
-    <a href="#" class="btn btn-pink">RRB Group D Exam City</a>
-    <a href="#" class="btn btn-blue">Bihar Police Online Form</a>
+    <a href="https://www.sarkariresult.com/latestjob/" target="_blank" class="btn btn-red">UP Police Constable Form</a>
+    <a href="https://www.sarkariresult.com/latestjob/" target="_blank" class="btn btn-green">RRB ALP Online Form</a>
+    <a href="https://www.sarkariresult.com/latestjob/" target="_blank" class="btn btn-yellow">SSC GD Online Form</a>
+    <a href="https://www.sarkariresult.com/latestjob/" target="_blank" class="btn btn-orange">Delhi Police Online Form</a>
+    <a href="https://www.sarkariresult.com/admitcard/" target="_blank" class="btn btn-pink">RRB Group D Exam City</a>
+    <a href="https://www.sarkariresult.com/latestjob/" target="_blank" class="btn btn-blue">Bihar Police Online Form</a>
 </div>
 
 <div class="main-container">
     <div class="table-box">
         <h3>Results</h3>
         <ul id="resList">
-            <li><a href="#">SSC CGL 2024 Final Result</a> <span class="new-tag">New</span></li>
-            <li><a href="#">UP Police Constable Result 2025</a></li>
-            <li><a href="#">IBPS PO Mains Result 2025</a></li>
-            <li><a href="#">UPSSSC Eye Testing Officer ETO Result</a></li>
-            <li><a href="#">Bihar BSEB DELED 3rd Selection List</a></li>
+            <li><a href="https://www.sarkariresult.com/result/" target="_blank">SSC CGL 2024 Final Result</a> <span class="new-tag">New</span></li>
+            <li><a href="https://www.sarkariresult.com/result/" target="_blank">UP Police Constable Result 2025</a></li>
+            <li><a href="https://www.sarkariresult.com/result/" target="_blank">IBPS PO Mains Result 2025</a></li>
+            <li><a href="https://www.sarkariresult.com/result/" target="_blank">Bihar BSEB DELED 3rd Selection List</a></li>
+            <li><a href="https://www.sarkariresult.com/result/" target="_blank">RPSC Assistant Professor Result</a></li>
         </ul>
     </div>
+
     <div class="table-box">
         <h3>Admit Card</h3>
         <ul id="admList">
-            <li><a href="#">Railway RRB Group D Admit Card 2026</a> <span class="new-tag">New</span></li>
-            <li><a href="#">UPSC IAS Prelims Admit Card 2026</a></li>
-            <li><a href="#">Bihar Police BPSSC SI Admit Card</a></li>
-            <li><a href="#">NTA UGC NET Dec Admit Card 2025</a></li>
-            <li><a href="#">CTET January 2026 Hall Ticket</a></li>
+            <li><a href="https://www.sarkariresult.com/admitcard/" target="_blank">Railway RRB Group D Admit Card</a> <span class="new-tag">New</span></li>
+            <li><a href="https://www.sarkariresult.com/admitcard/" target="_blank">UPSC IAS Prelims Admit Card 2026</a></li>
+            <li><a href="https://www.sarkariresult.com/admitcard/" target="_blank">Bihar Police BPSSC SI Admit Card</a></li>
+            <li><a href="https://www.sarkariresult.com/admitcard/" target="_blank">NTA UGC NET Dec Admit Card 2025</a></li>
+            <li><a href="https://www.sarkariresult.com/admitcard/" target="_blank">CTET January 2026 Hall Ticket</a></li>
         </ul>
     </div>
+
     <div class="table-box">
         <h3>Latest Jobs</h3>
         <ul id="jobList">
-            <li><a href="#">Railway RRB Group D Online Form 2026</a> <span class="new-tag">New</span></li>
-            <li><a href="#">India Post GDS Recruitment 2026</a></li>
-            <li><a href="#">UP Police SI Confidential Online Form</a></li>
-            <li><a href="#">Indian Navy 10+2 B.Tech Cadet Entry</a></li>
-            <li><a href="#">SSC MTS Online Form 2026</a></li>
+            <li><a href="https://www.sarkariresult.com/latestjob/" target="_blank">Railway RRB Group D Form 2026</a> <span class="new-tag">New</span></li>
+            <li><a href="https://www.sarkariresult.com/latestjob/" target="_blank">India Post GDS Recruitment 2026</a></li>
+            <li><a href="https://www.sarkariresult.com/latestjob/" target="_blank">UP Police SI Confidential Form</a></li>
+            <li><a href="https://www.sarkariresult.com/latestjob/" target="_blank">Indian Navy 10+2 B.Tech Entry</a></li>
+            <li><a href="https://www.sarkariresult.com/latestjob/" target="_blank">SSC MTS Online Form 2026</a></li>
         </ul>
     </div>
 </div>
@@ -112,66 +127,16 @@
     </table>
 
     <div class="red-bar">SARKARI RESULTS 2.0</div>
-    <p><b>Sarkari Results:</b> Sarkari Results 2.0 is a famous site in India that gives data about Sarkari work tests, results, and other related refreshes. It is one of the notable entries that many work searchers use to secure data about Government Position Opening...</p>
+    <p><b>Sarkari Results:</b> Sarkari Results 2.0 Is A Famous Site In India That Gives Data About Sarkari Work Tests, Sarkari Result 2.0 2025, And Other Related Refreshes. It Is One Of The Notable Entries That Many Work Searchers Use To Secure Data About Government Position Opening, Concede Cards, Test Dates, And Results.</p>
 
     <div class="red-bar">SARKARI RESULTS BIHAR</div>
-    <p>Each data connected with Bihar tests like OFSS Bihar, Bihar Board 10th Result, Bihar Board Matric 2025, Bihar Police 2025, Bihar SSC etc can be found here easily.</p>
+    <p>Each Data Connected With Sarkari Test Result In Bihar Can Be Seen As Here Like: OFSS Bihar, Bihar Board Tenth Outcome, Sarkari Result Bihar Board 2025, Bihar Board Matric 2025, Bihar Police 2025, Bihar Board Tenth, Bihar Ssc, Bihar Je, Bihar Common Court, Sarkari Result Bihar Board Result, Bihar Work, Bihar Result, Bihar 10+2 Most Recent Work, Bihar Sarkari Result , Bihar Sarkari Test, Bihar Govt Work, Concede Card, Bihar Sarkari Result, Eleventh Affirmation And So Forth.</p>
 
     <div class="red-bar">SARKARI RESULT HINDI (UP BOARD)</div>
-    <p>Uttar Pradesh is a state where lakhs of youth give tests. Here you will get UP Board Result 2025, UP Board Date Sheet, and Class 10th & 12th updates in Hindi.</p>
+    <p>Uttar Pradesh (Sarkariresult.Com.Cm UP Board) Is A State Where Lakhs Of Young People Give Sarkari Test Consistently To Land Government Positions, So Here UP Board Plays A Significant Part, So Here You Will Get Sarkari Result Up Board 2024, Up Barricade Result , Board 2025,Up Board Test Result, Sarkari Result Up Board Class Tenth, Up Board Result Date, Sarkari Result Up Board 2024 In Hindi And So On.</p>
 
     <div class="red-bar">SARKARIRESULT2.0 OFFICIAL WEBSITE</div>
-    <p><b>SarkariResult2.0.Com</b> is the official website presenting all latest updates such as Results, Online Forms, Job Notifications, and Exam Results 2025.</p>
+    <p><b>SarkariResult2.0.Com</b> Is The Official Website Of Sarkari Result, Presenting All The Latest Updates Such As Results, Online Forms, Job Notifications, Exam Results 2025, Employment News, Information In Hindi, Government Job Details, And Important Notices And Updates.</p>
 
     <div style="background:#fff3f3; border: 1px solid red; padding: 10px; font-size: 13px; margin-top: 20px;">
-        <b>Disclaimer:</b> 1. This Website Is Not Associated With Official Or Government Websites. All Information Provided Is For General Informational Purposes Only. Please Verify Information From Official Notifications.
-    </div>
-
-    <h3>FAQ -- Sarkari Result 2.0</h3>
-    <p><b>What is Sarkari Result 2.0?</b><br>It is a one-stop destination for all government job updates, results, and admit cards.</p>
-    <p><b>Is it free?</b><br>Yes, Sarkari Result 2.0 is completely free for all students.</p>
-</div>
-
-<footer>
-    <div style="margin-bottom: 15px;">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="20"> Instagram | 
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="20"> WhatsApp
-    </div>
-    <a href="#">Home</a> | <a href="#">Contact</a> | <a href="#">Privacy Policy</a> | <a href="#">Disclaimer</a>
-    <p>Copyright © 2025-2026 | sarkariresult2.0.com</p>
-</footer>
-
-<script>
-function searchJob() {
-    let input = document.getElementById('myInput').value.toUpperCase();
-    let lists = document.querySelectorAll('.table-box ul li');
-    lists.forEach(li => {
-        let text = li.innerText || li.textContent;
-        li.style.display = (text.toUpperCase().indexOf(input) > -1) ? "" : "none";
-    });
-}
-</script>
-
-</body>
-</html>
-
-
-
-
-
-
-
-<html lang="hi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarkari Result 2.0 - Official Website</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; line-height: 1.6; color: #333; }
-        header { background-color: #ff0000; color: white; text-align: center; padding: 15px 0; border-bottom: 5px solid #cc0000; }
-        header h1 { margin: 0; font-size: 2.5rem; }
-        nav { background: #000; padding: 10px; text-align: center; position: sticky; top: 0; z-index: 1000; }
-        nav a { color: white; text-decoration: none; margin: 0 10px; font-weight: bold; font-size: 14px; }
-        .search-container { display: inline-block; margin-left: 15px; }
-        .quick-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; padding: 10px; background: #fff; }
-        .btn { padding: 10px 15px; color:
+        <b>Disclaimer:</b> 1. This Website Is Not Associated With Official Or Government Websites. All Information Provided Is For General Informational Purposes Only and users of our website can not use c
